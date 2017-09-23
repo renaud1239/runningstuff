@@ -1,6 +1,5 @@
 
 class temps:
-    t=0
     def __init__(self,h=0,m=0,s=0):
         self.t=3600*h+60*m+s
     def str(self):
@@ -21,7 +20,6 @@ class temps:
         return st
 
 class vitesse:
-    v=0
     def __init__(self,d,t):
         self.v=3600*d/t.t
     def str(self):
