@@ -65,10 +65,10 @@ t=temps(0,19,44) # CUSTOM : meilleur temps sur 5 km.
 v=vitesse(5,t)
 print(t.str(),'/  5 km (',v.str(),')',end=' => ')
 v=vitesse(5,t)
-v.v=v.v/0.92
+v.v=v.v/0.95
 print(v.str(),end=' à ')
 v=vitesse(5,t)
-v.v=v.v/0.90
+v.v=v.v/0.93
 print(v.str())
 
 t=temps(0,40,25) # CUSTOM : meilleur temps sur 10 km.
@@ -148,7 +148,7 @@ for i in range(13,19): # CUSTOM : changement de range VMA possible.
 
 print('')
 # CUSTOM : changement d'ensemble de valeurs VMA spécifiques possible.        
-for vma in [15.62,15.97,16.14,16.49,16.52,16.60,16.80,16.89]:
+for vma in [15.62,15.97,16.00,16.14,16.35,16.49,16.52,16.60]:
     v.v=vma
     print(v.str(),end=' - ')
     t=temps()
