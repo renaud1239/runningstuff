@@ -9,7 +9,7 @@ marathontab.py
 ----------------
 Script Python pour calculer des **ordres de grandeur** d’objectif sur marathon en fonction de ses performances sur des distances plus courtes. Le script permet d’extrapoler des performances sur 10 km au semi et au marathon ainsi que d’extrapoler des performances au semi directement vers le marathon. Le script donne également des estimations de temps pour toutes ces distances en fonction de la VMA (vmaestim.py, ci-dessus, permet d'estimer sa VMA).
 
-Mon retour d’expérience sur les formules utilisées (et dérivées de celles que l'on trouve dans les magazines de running) est assez bon. Grosso modo, l'année dernière, je suis parti de ~41'45 sur 10 km (VMA autour de 15.5/16 km/h) pour finir par courir un marathon pas plat (~400 m D+) en 3 h 18 **après un entrainement adéquat** (14 semaines, ciblé 3 h 15/3 h 30). Donc les valeurs ci-dessous me semblent plutôt cohérentes. Cette année, en partant de 40'25 sur 10 km, j'espère faire un peu mieux dans quelques mois :-)
+Mon retour d’expérience sur les formules utilisées (et dérivées de celles que l'on trouve dans les magazines de running) est assez bon. Grosso modo, en 2016-17, je suis parti de ~41'45 sur 10 km (VMA autour de 15.5/16 km/h) pour finir par courir un marathon pas plat (~400 m D+) en 3 h 18 **après un entrainement adéquat** (14 semaines, ciblé 3 h 15/3 h 30) - avec un test sur semi en 1 h 31'48, 5 semaines avant le marathon. Donc les valeurs ci-dessous me semblent plutôt cohérentes. En 2017/18, en partant de 40'25 sur 10 km, j'espère faire un peu mieux du coup... We'll see...
 
 Exemple de sortie (tronquée pour racourcir ce README, la sortie complète est [ici](marathontab.ref)) :
 
