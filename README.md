@@ -1,7 +1,7 @@
 runningstuff
 ============
 
-marathonstuff.py
+marathontab.py
 ----------------
 Script Python pour calculer des **ordres de grandeur** d’objectif sur marathon en fonction de ses performances sur des distances plus courtes. Le script permet d’extrapoler des performances sur 10 km au semi et au marathon ainsi que d’extrapoler des performances au semi directement vers le marathon. Le script permet également de faire une estimation VMA sur la base de temps sur 5 km, 10 km, semi (et marathon). Ensuite des estimations de temps sont données pour toutes ces distances en fonction de la VMA. Le script est customisable facilement (chercher CUSTOM) pour être adapté à un profil de coureur.
 
