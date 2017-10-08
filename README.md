@@ -2,16 +2,38 @@ runningstuff
 ============
 
 vmaestim.py
-----------------
-Coming very soon :-)
+-----------
+
+Script Python pour estimer sa VMA (Vitesse Maximale Aérobie), grosso modo la vitesse maximale qu'un coureur est capable de tenir **en respirant** pendant 5 à 6 mins, à partir d'une performance (si possible une meilleure performance, si possible assez récente - disons datant de moins de 6 mois) sur 5 km, 10 km ou sur semi. La VMA est LE paramètre important de nombreux plans d'entrainement. En bonus, le script donne les vitesses de travail pour les entrainements fractionnés courts, semi-longs et longs (cf. ci-dessous et cf. surtout son plan d'entrainement) qui visent justement à améliorer sa VMA. En super bonus, le script donne une fenêtre de temps accessible modulo entrainement (et assez conservative) sur marathon étant donnée la fourchette VMA calculée.
+
+Exemple de sortie :
+
+    $ python3 vmaestim.py
+    Temps réf. (h/m/s)> 0/40/25
+    Dist. ref.> 10
+    Base : 10 @ 14.85 km/h ( 40 m 25 s )
+
+    VMA entre 16.14 km/h et 16.49 km/h
+
+    Intervalle vitesse fractionnés courts(1) (100% VMA) : 16.14 km/h à 16.49 km/h
+    Intervalle vitesse fractionnés semi-longs(2) (95% VMA) : 15.33 km/h à 15.67 km/h
+    Intervalle vitesse fractionnés longs(3) (85% VMA) : 13.72 km/h à 14.02 km/h
+
+    (1) intervalles rapides de 30 s à 1 min.
+    (2) intervalles rapides de 400 m à 1 km.
+    (3) intervalles rapides de 6 à 15 min.
+
+    Fenêtre marathon : 3 h 00 m 34 s ( 14.02 km/h ) à 3 h 16 m 07 s ( 12.91 km/h )
 
 marathontab.py
-----------------
+--------------
 Script Python pour calculer des **ordres de grandeur** d’objectif sur marathon en fonction de ses performances sur des distances plus courtes. Le script permet d’extrapoler des performances sur 10 km au semi et au marathon ainsi que d’extrapoler des performances au semi directement vers le marathon. Le script donne également des estimations de temps pour toutes ces distances en fonction de la VMA (vmaestim.py, ci-dessus, permet d'estimer sa VMA).
 
 Mon retour d’expérience sur les formules utilisées (et dérivées de celles que l'on trouve dans les magazines de running) est assez bon. Grosso modo, en 2016-17, je suis parti de ~41'45 sur 10 km (VMA autour de 15.5/16 km/h) pour finir par courir un marathon pas plat (~400 m D+) en 3 h 18 **après un entrainement adéquat** (14 semaines, ciblé 3 h 15/3 h 30) - avec un test sur semi en 1 h 31'48, 5 semaines avant le marathon. Donc les valeurs ci-dessous me semblent plutôt cohérentes. En 2017/18, en partant de 40'25 sur 10 km, j'espère faire un peu mieux du coup... We'll see...
 
 Exemple de sortie (tronquée pour raccourcir ce README, la sortie complète est [ici](marathontab.ref)) :
+
+    $ python3 marathontab.py
 
     Extrapolation semi vers marathon :
     ...
