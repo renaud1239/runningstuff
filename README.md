@@ -159,5 +159,71 @@ Exemple de sortie (tronquée pour raccourcir ce README, la sortie complète est 
 
 Il n'y a plus qu'à s'entrainer (durement) après...
 
+interpobj.py
+------------
+
+Pour une fourchette d'objectifs de temps au marathon, donnne une fourchette d'objectifs de temps pour le semi puis interpole en donnant : des fourchettes d'objectifs de temps (et de vitesses) pour différentes distances d'entrainement ainsi que des fourchettes d'objectifs de distance (et de vitesse) pour différentes durées d'entrainement. Tout ça plutôt sur parcours plat (cela va sans dire).
+
+L'entrainement étant supposé faire progresser, j'imagine que l'on doit du coup progressivement converger vers les intervalles objectifs au gré des semaines et qu'il est normal d'être un peu en dehors au début. Retour d'expérience là dessus en janvier 2018.
+
+Exemple de sortie :
+
+    $ python3 interpobj.py
+    Temps bas (h/m/s)> 3/5/00 
+    Temps haut (h/m/s)> 3/10/00
+    Base mar. basse : 42.195 @ 13.68 km/h ( 3 h 05 m 00 s )
+    Base mar. haute : 42.195 @ 13.32 km/h ( 3 h 10 m 00 s )
+    Base semi basse : 21 @ 14.30 km/h ( 1 h 28 m 06 s )
+    Base semi haute : 21 @ 13.93 km/h ( 1 h 30 m 29 s )
+
+    Objectifs temps/vitesse pour distances :
+    14 km - 56 m 06 s ( 14.97 km/h ) à 57 m 37 s ( 14.58 km/h )
+    15 km - 1 h 00 m 40 s ( 14.84 km/h ) à 1 h 02 m 19 s ( 14.44 km/h )
+    16 km - 1 h 05 m 14 s ( 14.72 km/h ) à 1 h 07 m 00 s ( 14.33 km/h )
+    17 km - 1 h 09 m 49 s ( 14.61 km/h ) à 1 h 11 m 42 s ( 14.23 km/h )
+    18 km - 1 h 14 m 23 s ( 14.52 km/h ) à 1 h 16 m 24 s ( 14.14 km/h )
+    19 km - 1 h 18 m 57 s ( 14.44 km/h ) à 1 h 21 m 06 s ( 14.06 km/h )
+    20 km - 1 h 23 m 32 s ( 14.37 km/h ) à 1 h 25 m 47 s ( 13.99 km/h )
+    21 km - 1 h 28 m 06 s ( 14.30 km/h ) à 1 h 30 m 29 s ( 13.93 km/h )
+    22 km - 1 h 32 m 40 s ( 14.24 km/h ) à 1 h 35 m 11 s ( 13.87 km/h )
+    23 km - 1 h 37 m 15 s ( 14.19 km/h ) à 1 h 39 m 52 s ( 13.82 km/h )
+    24 km - 1 h 41 m 49 s ( 14.14 km/h ) à 1 h 44 m 34 s ( 13.77 km/h )
+    25 km - 1 h 46 m 23 s ( 14.10 km/h ) à 1 h 49 m 16 s ( 13.73 km/h )
+    26 km - 1 h 50 m 58 s ( 14.06 km/h ) à 1 h 53 m 58 s ( 13.69 km/h )
+    27 km - 1 h 55 m 32 s ( 14.02 km/h ) à 1 h 58 m 39 s ( 13.65 km/h )
+    28 km - 2 h 00 m 06 s ( 13.99 km/h ) à 2 h 03 m 21 s ( 13.62 km/h )
+    29 km - 2 h 04 m 40 s ( 13.96 km/h ) à 2 h 08 m 03 s ( 13.59 km/h )
+    30 km - 2 h 09 m 15 s ( 13.93 km/h ) à 2 h 12 m 44 s ( 13.56 km/h )
+    31 km - 2 h 13 m 49 s ( 13.90 km/h ) à 2 h 17 m 26 s ( 13.53 km/h )
+    32 km - 2 h 18 m 23 s ( 13.87 km/h ) à 2 h 22 m 08 s ( 13.51 km/h )
+    33 km - 2 h 22 m 58 s ( 13.85 km/h ) à 2 h 26 m 50 s ( 13.48 km/h )
+    34 km - 2 h 27 m 32 s ( 13.83 km/h ) à 2 h 31 m 31 s ( 13.46 km/h )
+    35 km - 2 h 32 m 06 s ( 13.81 km/h ) à 2 h 36 m 13 s ( 13.44 km/h )
+    36 km - 2 h 36 m 41 s ( 13.79 km/h ) à 2 h 40 m 55 s ( 13.42 km/h )
+    37 km - 2 h 41 m 15 s ( 13.77 km/h ) à 2 h 45 m 36 s ( 13.41 km/h )
+    38 km - 2 h 45 m 49 s ( 13.75 km/h ) à 2 h 50 m 18 s ( 13.39 km/h )
+    39 km - 2 h 50 m 24 s ( 13.73 km/h ) à 2 h 55 m 00 s ( 13.37 km/h )
+
+    Objectifs distance/vitesse pour temps :
+    1 h 15 m 00 s - 17.70 km ( 14.16 km/h ) à 18.13 km ( 14.51 km/h )
+    1 h 20 m 00 s - 18.77 km ( 14.08 km/h ) à 19.23 km ( 14.42 km/h )
+    1 h 25 m 00 s - 19.83 km ( 13.00 km/h ) à 20.32 km ( 14.34 km/h )
+    1 h 30 m 00 s - 20.90 km ( 13.93 km/h ) à 21.42 km ( 14.28 km/h )
+    1 h 35 m 00 s - 21.96 km ( 13.87 km/h ) à 22.51 km ( 14.22 km/h )
+    1 h 40 m 00 s - 23.03 km ( 13.82 km/h ) à 23.60 km ( 14.16 km/h )
+    1 h 45 m 00 s - 24.09 km ( 13.77 km/h ) à 24.70 km ( 14.11 km/h )
+    1 h 50 m 00 s - 25.16 km ( 13.72 km/h ) à 25.79 km ( 14.07 km/h )
+    1 h 55 m 00 s - 26.22 km ( 13.68 km/h ) à 26.88 km ( 14.03 km/h )
+    2 h 00 m 00 s - 27.29 km ( 13.64 km/h ) à 27.98 km ( 13.99 km/h )
+    2 h 05 m 00 s - 28.35 km ( 13.61 km/h ) à 29.07 km ( 13.95 km/h )
+    2 h 10 m 00 s - 29.42 km ( 13.58 km/h ) à 30.16 km ( 13.92 km/h )
+    2 h 15 m 00 s - 30.48 km ( 13.55 km/h ) à 31.26 km ( 13.89 km/h )
+    2 h 20 m 00 s - 31.55 km ( 13.52 km/h ) à 32.35 km ( 13.87 km/h )
+    2 h 25 m 00 s - 32.61 km ( 13.49 km/h ) à 33.45 km ( 13.84 km/h )
+    2 h 30 m 00 s - 33.68 km ( 13.47 km/h ) à 34.54 km ( 13.82 km/h )
+    2 h 35 m 00 s - 34.74 km ( 13.45 km/h ) à 35.63 km ( 13.79 km/h )
+
+
+
 D'autres outils suivront prochainement...
 -----------------------------------------
